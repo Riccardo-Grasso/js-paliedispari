@@ -1,32 +1,3 @@
-const even = "pari";
-const odd = "dispari";
-
-let sceltaUtente = prompt("Benvenuto! Desideri PARI o DISPARI?");
-let sceltaComputer;
-
-switch (sceltaUtente) {
-    case "pari":
-        sceltaComputer = odd;
-        break;
-    case "dispari":
-        sceltaComputer = even;
-        break;
-}
-
-/* if (sceltaUtente.toLowerCase == "pari") {
-    sceltaComputer = odd;
-
-} else if (sceltaUtente.toLowerCase == "dispari") {
-    sceltaComputer = even;
-} */
-
-console.log(`L'utente ha scelto: ${sceltaUtente}`);
-console.log(`Il computer ha: ${sceltaComputer}`);
-
-const punteggioUtente = parseInt(prompt("Scegli un valore tra 1 e 5: "));
-console.log(`L'utente ha scelto ${punteggioUtente}`);
-
-
 function gioco(num1) {
     function numeroRandom(min, max) {
         const rand = Math.floor(Math.random() * (max - min + 1) + min);
@@ -53,4 +24,34 @@ function gioco(num1) {
     }
 }
 
-gioco(punteggioUtente);
+
+const even = "pari";
+const odd = "dispari";
+
+let sceltaUtente = prompt("Benvenuto! Desideri PARI o DISPARI?");
+let sceltaComputer;
+
+if (!isNaN(sceltaUtente)) {
+    alert("Valore inserito non valido, riprova.");
+} else {
+    if (sceltaUtente.toLowerCase() == "pari") {
+        let sceltaComputer = odd;
+        console.log(`L'utente ha scelto: ${sceltaUtente}`);
+        console.log(`Il computer ha: ${sceltaComputer}`);
+
+    } else if (sceltaUtente.toLowerCase() == "dispari") {
+        let sceltaComputer = even;
+        console.log(`L'utente ha scelto: ${sceltaUtente}`);
+        console.log(`Il computer ha: ${sceltaComputer}`);
+    }
+
+
+    const punteggioUtente = parseInt(prompt("Scegli un valore tra 1 e 5: "));
+
+    if (isNaN(punteggioUtente) || punteggioUtente < 1 || punteggioUtente > 5) {
+        alert("Attenzione! Valore inserito non valido");
+    } else {
+        console.log(`L'utente ha scelto ${punteggioUtente}`);
+        gioco(punteggioUtente);
+    }
+}
