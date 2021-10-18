@@ -44,9 +44,9 @@ function gioco(num1) {
     }
 
     totalePari(punteggioTotale);
-    console.log(totalePari(punteggioTotale));
+    console.log("Punteggio pari? " + totalePari(punteggioTotale));
 
-    if ((totalePari == true && sceltaUtente == "pari") || (totalePari == false && sceltaUtente == "dispari")) {
+    if ((totalePari(punteggioTotale) == true && sceltaUtente == "pari") || (totalePari(punteggioTotale) == false && sceltaUtente == "dispari")) {
         alert(`Totale: ${punteggioTotale}` + "\nCongratulazioni, Hai vinto!");
     } else {
         alert(`Totale: ${punteggioTotale}` + "\nMi dispiace, ha vinto il computer");
