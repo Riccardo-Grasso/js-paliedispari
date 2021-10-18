@@ -1,4 +1,3 @@
-
 const even = "pari";
 const odd = "dispari";
 
@@ -29,8 +28,8 @@ console.log(`L'utente ha scelto ${punteggioUtente}`);
 
 
 function gioco(num1) {
-    function numeroRandom(minNumber = 1, maxNumber = 5) {
-        const rand = Math.floor(Math.random() * (maxNumber - minNumber + 1) + minNumber);
+    function numeroRandom(min, max) {
+        const rand = Math.floor(Math.random() * (max - min + 1) + min);
         return rand;
     }
     const punteggioComputer = numeroRandom(1, 5);
