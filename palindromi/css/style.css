@@ -1,0 +1,17 @@
+body {
+    background: rgb(222,158,48);
+    background: radial-gradient(circle, rgba(222,158,48,1) 0%, rgba(178,176,226,1) 100%); 
+}
+
+.title {
+    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+    color: rgb(82, 58, 9)
+}
+
+.container #parola {
+    width: 300px;
+}
+
+.container .btn {
+    border: 1px solid rgb(82, 58, 9);
+}
